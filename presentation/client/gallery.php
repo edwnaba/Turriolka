@@ -45,7 +45,7 @@
                             <a href="#page-top"></a>
                         </li>
                         <li>
-                            <a class="page-scroll" href="./index.html">Inicio</a>
+                            <a class="page-scroll" href="./home.php">Inicio</a>
                         </li>
                     </ul>
                 </div>
