@@ -234,7 +234,7 @@
 
             <div class="row" style="margin-top:20px;">
                 <div class="text-center">
-                    <a href="./gallery.html" class="btn btn-primary btn-lg">Ver mas</a>
+                    <a href="./gallery.php" class="btn btn-primary btn-lg">Ver mas</a>
                 </div>
             </div>
         </div>
