@@ -10,7 +10,7 @@
         <meta name="description" content="">
         <meta name="author" content="">
 
-        <title>Tu Empresa</title>
+        <title>Nombre Empresa</title>
 
         <!-- Bootstrap Core CSS -->
         <link href="../../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -51,6 +51,7 @@
                 </div>
                 <!-- /.navbar-collapse -->
             </div>
+            <!-- /.container-fluid -->
             <!-- /.container-fluid -->
         </nav>
 
