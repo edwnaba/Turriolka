@@ -3,6 +3,7 @@
 
 <head>
 
+
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -29,9 +30,53 @@
     <link rel="stylesheet" type="text/css" href="../../css/StyleSlider.min.css">
     <link rel="stylesheet" type="text/css" href="../../css/StyleSliderTav.css">
 
+
+
+    <style type="text/css">
+        
+        body{
+            margin: 0px;
+        }
+
+        video{
+            position: fixed;
+            min-height: 100%;
+            min-width: 100%;
+
+            top: 50%;
+            left: 50%;
+            transform: translateX(-50%) translateY(-50%);
+
+            z-index: -1;
+        }
+        
+        .fond1{
+            background-image: url("../../img/fondo1.jpg");
+            width: 100%;
+            height: 100%; 
+        }
+
+        .fond2{
+            background: rgba(8,8,8,0.6);
+        }
+
+        .textTav{
+            background: rgba(100,100,100,0.6);
+            color: #fff;
+            border-radius: 15px;
+        }
+
+    </style>
 </head>
 
 <body id="page-top" class="index">
+
+
+    <!-- Video de fondo -->
+    <video src="../../video/video1.mp4" autoplay loop mute poster="imagen.jpg"></video>
+    <!-- final de fondo de video -->
+
+
 
     <!-- Navigation -->
     <nav id="mainNav" class="navbar navbar-default navbar-custom navbar-fixed-top">
@@ -82,7 +127,7 @@
     </header>
 
     <!-- Services Section -->
-    <section id="portfolio" class="bg-light-gray" style="margin: 0px;">
+    <section id="portfolio" style="margin: 0px;" class="fond1">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
@@ -140,12 +185,12 @@
     </section>
 
     <!-- Portfolio Grid Section -->
-    <section id="galeria" class="bg-light-gray">
+    <section id="galeria" class="fond2">
         <div class="container">
             <div class="row">
-                <div class="col-lg-12 text-center">
+                <div class="col-lg-12 text-center" style="color: #fff;">
                     <h2 class="section-heading">Galería</h2>
-                    <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
+                    <h3 class="section-subheading ">Lorem ipsum dolor sit amet consectetur.</h3>
                 </div>
             </div>
             <div class="row">
@@ -241,7 +286,7 @@
     </section>
 
     <!-- About Section -->
-    <section id="about">
+    <section id="about" class="fond1">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
@@ -256,13 +301,13 @@
                             <div class="timeline-image">
                                 <img class="img-circle img-responsive" src="../../img/about/1.jpg" alt="">
                             </div>
-                            <div class="timeline-panel">
-                                <div class="timeline-heading">
+                            <div class="timeline-panel textTav">
+                                <div>
                                     <h4>2009-2011</h4>
                                     <h4 class="subheading">Feria del café</h4>
                                 </div>
                                 <div class="timeline-body">
-                                    <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</p>
+                                    <p >Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</p>
                                 </div>
                             </div>
                         </li>
@@ -270,13 +315,13 @@
                             <div class="timeline-image">
                                 <img class="img-circle img-responsive" src="../../img/about/2.jpg" alt="">
                             </div>
-                            <div class="timeline-panel">
-                                <div class="timeline-heading">
+                            <div class="timeline-panel textTav">
+                                <div>
                                     <h4>Marzo 2012</h4>
                                     <h4 class="subheading">Segunda feria internacional del café</h4>
                                 </div>
                                 <div class="timeline-body">
-                                    <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam!</p>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam!</p>
                                 </div>
                             </div>
                         </li>
@@ -284,13 +329,13 @@
                             <div class="timeline-image">
                                 <img class="img-circle img-responsive" src="../../img/about/3.png" alt="">
                             </div>
-                            <div class="timeline-panel">
-                                <div class="timeline-heading">
+                            <div class="timeline-panel textTav">
+                                <div>
                                     <h4>Diciembre 2012</h4>
                                     <h4 class="subheading">Feria nacional del café</h4>
                                 </div>
                                 <div class="timeline-body">
-                                    <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam!</p>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam!</p>
                                 </div>
                             </div>
                         </li>
@@ -298,13 +343,13 @@
                             <div class="timeline-image">
                                 <img class="img-circle img-responsive" src="../../img/about/4.png" alt="">
                             </div>
-                            <div class="timeline-panel">
-                                <div class="timeline-heading">
+                            <div class="timeline-panel textTav">
+                                <div>
                                     <h4>Julio 2014</h4>
                                     <h4 class="subheading">Feria internacional del café</h4>
                                 </div>
                                 <div class="timeline-body">
-                                    <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam!</p>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam!</p>
                                 </div>
                             </div>
                         </li>

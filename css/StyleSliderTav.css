@@ -1,5 +1,5 @@
 .contentTav{
-	padding:15px; margin: auto; background-color:#aaa;font-family:'Open Sans',sans-serif,arial,helvetica,verdana; width: 80%; height: 100%;
+	padding:15px; margin: auto; background-color:rgba(5,5,5,0.7);font-family:'Open Sans',sans-serif,arial,helvetica,verdana; width: 80%; height: 100%;border-radius: 15px;
 }
 
 .content2Tav{
