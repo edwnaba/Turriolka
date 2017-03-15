@@ -57,6 +57,9 @@
                             <a href="#page-top"></a>
                         </li>
                         <li>
+                            <a class="page-scroll" href="#nosotros">Sobre Nosotros</a>
+                        </li>
+                        <li>
                             <a class="page-scroll" href="#portfolio">Productos</a>
                         </li>
                         <li>
@@ -92,7 +95,7 @@
 
 
         <!--MISION, VISION ANTECEDENTES HISTORIA-->
-        <div class="container-fluid bg-grey">
+        <div id="nosotros" class="container-fluid bg-grey">
             <div class="row">
                 <div class="col-sm-4">
                     <span class="glyphicon glyphicon-globe logo slideanim"></span>
@@ -625,7 +628,7 @@
 
         <!-- Slider -->
         <script type="text/javascript">jssor_1_slider_init();</script>
-        
+
         <script src="../../js/company.js" type="text/javascript"></script>
     </body>
 
