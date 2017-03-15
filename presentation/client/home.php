@@ -1,8 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-    
-</head>
-
     <head>
 
         <meta charset="utf-8">
@@ -32,7 +29,7 @@
         <link rel="stylesheet" type="text/css" href="../../css/StyleSlider.min.css">
         <link rel="stylesheet" type="text/css" href="../../css/StyleSliderTav.css">
 
-        <style type="text/css">
+         <style type="text/css">
         
         body{
             margin: 0px;
@@ -68,7 +65,6 @@
 
     </style>
 
-
         <!-- Company -->
         <script src="../../vendor/jquery/jquery.min.js"></script>
 
@@ -78,22 +74,20 @@
 
     <body id="page-top" class="index">
 
-       <!-- Video de fondo -->
+         <!-- Video de fondo -->
     <video src="../../video/video1.mp4" autoplay loop mute poster="imagen.jpg"></video>
     <!-- final de fondo de video -->
 
-
-
-    <!-- Navigation -->
-    <nav id="mainNav" class="navbar navbar-default navbar-custom navbar-fixed-top">
-        <div class="container">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header page-scroll">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
-                </button>
-                <a class="navbar-brand page-scroll" href="#page-top">Empresa</a>
-            </div>
+        <!-- Navigation -->
+        <nav id="mainNav" class="navbar navbar-default navbar-custom navbar-fixed-top">
+            <div class="container">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header page-scroll">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                        <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
+                    </button>
+                    <a class="navbar-brand page-scroll" href="#page-top">Empresa</a>
+                </div>
 
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -135,10 +129,8 @@
             </div>
         </header>
 
-    <!-- Services Section -->
-    <section id="portfolio" style="margin: 0px;" class="fond1">
-        <div class="container">
-
+        <!--MISION, VISION ANTECEDENTES HISTORIA-->
+        <div id="nosotros" class="container-fluid" style="margin: 0px;" class="fond1">
             <div class="row">
                 <div class="col-sm-4">
                     <span class="glyphicon glyphicon-globe logo slideanim"></span>
@@ -215,6 +207,7 @@
             </div>
         </section>
 
+
     <!-- Portfolio Grid Section -->
     <section id="galeria" class="fond2">
         <div class="container">
@@ -222,6 +215,7 @@
                 <div class="col-lg-12 text-center" style="color: #fff;">
                     <h2 class="section-heading">Galería</h2>
                     <h3 class="section-subheading ">Lorem ipsum dolor sit amet consectetur.</h3>
+
                 </div>
                 <div class="row">
                     <div class="text-center">
