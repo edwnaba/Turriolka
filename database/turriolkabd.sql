@@ -1,103 +1,108 @@
 create database turriolkadb;
 use turriolkadb;
 
--- --------------------------------------------------------
-
---
--- Estructura de tabla para la tabla `la_empresa`
---
-
 CREATE TABLE IF NOT EXISTS `la_empresa` (
-`atId` int(11) NOT NULL,
+`atId` int NOT NULL,
   `atHistoria` text NOT NULL,
   `atQuinesSomos` text,
-  `atDescripcionGaleria` text NOT NULL,
-  `atElaboracion` text NOT NULL,
-  `atDescripcionProductoA` text NOT NULL,
-  `atElaboracionProductoB` text NOT NULL,
-  `atDenominacion` text NOT NULL,
-  `atDescripcionContactos` text NOT NULL,
-  `atDireccion` text NOT NULL,
-  `atCorreo` text NOT NULL,
-  `atTelefonoA` int(11) NOT NULL,
-  `atTelefonoB` int(11) NOT NULL,
-  `atEncargadoA` text NOT NULL,
-  `atEncargadoB` text NOT NULL,
   `atMision` text NOT NULL,
   `atVision` text NOT NULL,
-  `atIdioma` int(11) NOT NULL
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=3 ;
+  `atDescripcionProductos` text NOT NULL,
+  `atDescripcionGaleria` text NOT NULL,
+  `atDescripcionPremios` text NOT NULL,
+  `atDireccion` text NOT NULL,
+  `atCorreo` text NOT NULL,
+  `atTelefono` int NOT NULL,
+  `atIdioma` int NOT NULL
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
 
--- --------------------------------------------------------
-
---
--- Estructura de tabla para la tabla `la_galeria`
---
-
-CREATE TABLE IF NOT EXISTS `la_galeria` (
-`atId` int(11) NOT NULL,
-  `atNombre` text NOT NULL,
-  `atDescripcion` text NOT NULL,
-  `atIdioma` int(11) NOT NULL,
-  `atcodigoImagen` int(11) NOT NULL
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=11 ;
-
---
--- --------------------------------------------------------
-
---
--- Estructura de tabla para la tabla `la_imagen`
---
-
-CREATE TABLE IF NOT EXISTS `la_imagen` (
-`atId` int(11) NOT NULL,
-  `atNombre` text NOT NULL,
-  `atTipo` int(11) NOT NULL
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=4 ;
-
-
--- --------------------------------------------------------
-
---
--- Estructura de tabla para la tabla `la_productos`
---
 
 CREATE TABLE IF NOT EXISTS `la_productos` (
-`atId` int(11) NOT NULL,
+  `atId` int NOT NULL,
   `atNombre` text NOT NULL,
-  `atPrecio` int(11) NOT NULL,
-  `atDescripcion` text NOT NULL,
-  `atIdioma` int(11) NOT NULL,
-  `atcodigoProducto` int(11) NOT NULL,
+  `atDescripcionCorta` text NOT NULL,
+  `atDescripcionLarga` text NOT NULL,
+  `atIdioma` int NOT NULL,
+  `atcodigoProducto` int NOT NULL,
   `atNombreImagen` text NOT NULL
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=4 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
 
---
--- Volcado de datos para la tabla `la_productos`
---
 
--- --------------------------------------------------------
+CREATE TABLE IF NOT EXISTS `la_galeria` (
+  `atId` int NOT NULL,
+  `atNombre` text NOT NULL,
+  `atDescripcion` text NOT NULL,
+  `atIdioma` int NOT NULL,
+  `atcodigoImagen` int NOT NULL
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=1;
 
---
--- Estructura de tabla para la tabla `la_titulos`
---
+CREATE TABLE IF NOT EXISTS `la_imagen` (
+  `atId` int NOT NULL,
+  `atNombre` text NOT NULL,
+  `atTipo` int NOT NULL
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+
 
 CREATE TABLE IF NOT EXISTS `la_titulos` (
-`atId` int(11) NOT NULL,
+`atId` int NOT NULL,
   `atNombre` text NOT NULL,
   `atDescripcion` text NOT NULL,
+  `atIdioma` int NOT NULL
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+
+
+CREATE TABLE IF NOT EXISTS `la_premio` (
+  `atId` int NOT NULL,
+  `atNombre` text NOT NULL,
+  `atDescripcion` text NOT NULL,
+  `atAno` text NOT NULL,
+  `atNombreImagen` text NOT NULL,
+  `atIdioma` int NOT NULL
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+
+
+CREATE TABLE IF NOT EXISTS `la_variedad` (
+  `atId` int NOT NULL,
+  `atNombre` text NOT NULL,
+  `atDescripcion` text NOT NULL,
+  `atNombreImagen` text NOT NULL,
+  `atCalidad` int NOT NULL,
+  `atPotencialRendimiento` int NOT NULL,
+  `atAltura` int NOT NULL,
+  `atAltitud` int NOT NULL,
+  `atToleranciaRoya` int NOT NULL,
+  `atNematodos` int NOT NULL,
+  `atAntrscnosis` int NOT NULL,
+  `atAnosCosecha` int NOT NULL,
+  `atRequerimientosNutricionales` int NOT NULL,
+  `atTamanoFruto` int NOT NULL,
+  `atColor` text NOT NULL,
+
+  `atMaduracion` text NOT NULL,
+  `atRendimientoCereza` text NOT NULL,
+  `atDensidad` text NOT NULL,
+  `atInformacionAdicional` text,
+
+  `atDerechoPropiedad` text NOT NULL,
+  `atObtentor` text NOT NULL,
+  `atdescripcionGenetica` text NOT NULL,
+  `atFamilia` text,
+
+   `atDescripcionURL` text,
+   `atURL` text,
+  
   `atIdioma` int(11) NOT NULL
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=39 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
 
---
--- Volcado de datos para la tabla `la_titulos`
---
--- Índices para tablas volcadas
---
 
---
--- Indices de la tabla `la_empresa`
---
+
+ALTER TABLE `la_variedad`
+ ADD PRIMARY KEY (`atId`);
+
+
+ALTER TABLE `la_premio`
+ ADD PRIMARY KEY (`atId`);
+
 ALTER TABLE `la_empresa`
  ADD PRIMARY KEY (`atId`);
 
@@ -132,6 +137,13 @@ ALTER TABLE `la_titulos`
 --
 -- AUTO_INCREMENT de la tabla `la_empresa`
 --
+
+ALTER TABLE `la_premio`
+MODIFY `atId` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=1;
+
+ALTER TABLE `la_variedad`
+MODIFY `atId` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=1;
+
 ALTER TABLE `la_empresa`
 MODIFY `atId` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=1;
 --
