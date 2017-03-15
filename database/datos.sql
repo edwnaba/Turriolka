@@ -22,8 +22,7 @@ En la actualidad, Publicidades Focus ha ampliado sus metas, encontrando un gran 
 'Publicidades Focus es una agencia de publicidad, orientada a prestar una plataforma comunicacional y publicitaria a las fundaciones sin fines de lucro, dedicadas a la captación, atención e inclusión de las personas con discapacidad cognitiva, en especial a las personas con Síndrome de Down.
 Brazo derecho de la productora Capacity, Publicidades Focus fue creada en el año 1981, abriendo sus puertas específicamente el 24 de julio de este año, con el fin de reinvertir el dinero obtenido de los documentales y películas educativas, sobre discapacidad, obtenidas por la Capacity, a fin de sumar su grano de arena en la promoción, educación y normalización de las Personas con algún tipo de condición especial.',
 'La misión de Luminarias impala S.A de C.V, es la de iluminar los hogares y los centros de trabajo de nuestros clientes, en forma suficiente, económica y con productos de la mayor calidad, ajustados a los parámetros ecológicos y siempre en beneficio del menor consumo y mayor servicio de los usuarios  finales.',
-'La visión de luminarias impala, es que la tecnología llegue a todos los clientes, ajustando nuestros productos a los avances tecnológicos y cuidando del bolsillo de nuestros clientes y a la vez de la ecología, al producir luminarias de bajo consumo y larga duración.
-Nota completa: Ejemplo de Misión, visión y valores',
+'La visión de luminarias impala, es que la tecnología llegue a todos los clientes, ajustando nuestros productos a los avances tecnológicos y cuidando del bolsillo de nuestros clientes y a la vez de la ecología, al producir luminarias de bajo consumo y larga duración.',
 'Los productos de nuestra finca son procesados de manera particular ya que...',
 'Poseemos diversas imáganes sobre...',
 'Nuestro manera de trabajar nos ha llevado a participar en...',
