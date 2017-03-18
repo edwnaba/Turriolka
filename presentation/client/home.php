@@ -27,6 +27,7 @@
         <!-- Slider -->
         <script type="text/javascript" src="../../js/libJS.min.js"></script>
         <link rel="stylesheet" type="text/css" href="../../css/StyleSlider.min.css">
+        <link rel="stylesheet" type="text/css" href="../../css/coffee.css">
         <link rel="stylesheet" type="text/css" href="../../css/StyleSliderTav.css">
 
          <style type="text/css">
@@ -78,6 +79,28 @@
     <video src="../../video/video1.mp4" autoplay loop mute poster="imagen.jpg"></video>
     <!-- final de fondo de video -->
 
+    <div class="portfolio-modal modal fade" id="modalVariedades" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="close-modal" data-dismiss="modal">
+                    <div class="lr">
+                        <div class="rl">
+                        </div>
+                    </div>
+                    </div>
+                    <div>
+                        <div>
+                            <?php include 'cafe.php';?>
+                        </div>      
+                    </div>
+                  
+            </div>
+        </div>
+    </div>
+
+        
+    
+
         <!-- Navigation -->
         <nav id="mainNav" class="navbar navbar-default navbar-custom navbar-fixed-top">
             <div class="container">
@@ -86,7 +109,7 @@
                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
                         <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
                     </button>
-                    <a class="navbar-brand page-scroll" href="#page-top">Empresa</a>
+                    <a class="navbar-brand page-scroll" href="#page-top">Turriolka</a>
                 </div>
 
                 <!-- Collect the nav links, forms, and other content for toggling -->
@@ -109,6 +132,10 @@
                         </li>
 
                         <li>
+                            <a href="#modalVariedades" class="portfolio-link" data-toggle="modal">variedades</a>
+                        </li>
+
+                        <li>
                             <a class="page-scroll" href="#contact">Contact</a>
                         </li>
                     </ul>
@@ -122,8 +149,8 @@
         <header>
             <div class="container">
                 <div class="intro-text">
-                    <div class="intro-lead-in">Bienvenido a su empresa de café</div>
-                    <div class="intro-heading">EMPRESA</div>
+                    <!--<div class="intro-lead-in">Bienvenido a su empresa de café</div> -->
+                    <div class="intro-heading"><img src="../../img/Logo-turriolka.png" alt=""></div>
                     <!--<a href="#services" class="page-scroll btn btn-xl">Continuar</a>-->
                 </div>
             </div>
@@ -308,6 +335,11 @@
                 </div>
             </div>
         </section>
+
+
+
+
+
 
     <!-- About Section -->
     <section id="about" class="fond1">
