@@ -157,19 +157,22 @@
         </header>
 
         <!--MISION, VISION ANTECEDENTES HISTORIA-->
-        <div id="nosotros" class="container-fluid" style="margin: 0px;" class="fond1">
-            <div class="row">
-                <div class="col-sm-4">
-                    <span class="glyphicon glyphicon-globe logo slideanim"></span>
-                </div>
-                <div class="col-sm-8">
-                    <h2 id="level2">Nuestros Valores</h2><br>
-                    <h4 id="level4"><strong>MISSION:</strong> La misión de Luminarias impala S.A de C.V, es la de iluminar los hogares y los centros de trabajo de nuestros clientes, en forma suficiente, económica y con productos de la mayor calidad, ajustados a los parámetros ecológicos y siempre en beneficio del menor consumo y mayor servicio de los usuarios  finales.</h4><br>
-                    <p id="vision">
-                        <strong>VISION:</strong> La visión de luminarias impala, es que la tecnología llegue a todos los clientes, ajustando nuestros productos a los avances tecnológicos y cuidando del bolsillo de nuestros clientes y a la vez de la ecología, al producir luminarias de bajo consumo y larga duración.</p>
+        <section>
+            <div id="nosotros" class="container-fluid" style="margin: 0px;" class="fond1">
+                <div class="row">
+                    <div class="col-sm-4">
+                        <br/>
+                        <span class="glyphicon glyphicon-globe logo slideanim"></span>
+                    </div>
+                    <div class="col-sm-8">
+                        <h2 id="level2">Nuestros Valores</h2><br>
+                        <h4 id="level4"><strong>MISSION:</strong> La misión de Luminarias impala S.A de C.V, es la de iluminar los hogares y los centros de trabajo de nuestros clientes, en forma suficiente, económica y con productos de la mayor calidad, ajustados a los parámetros ecológicos y siempre en beneficio del menor consumo y mayor servicio de los usuarios  finales.</h4><br>
+                        <p id="vision">
+                            <strong>VISION:</strong> La visión de luminarias impala, es que la tecnología llegue a todos los clientes, ajustando nuestros productos a los avances tecnológicos y cuidando del bolsillo de nuestros clientes y a la vez de la ecología, al producir luminarias de bajo consumo y larga duración.</p>
+                    </div>
                 </div>
             </div>
-        </div>
+        </section>
 
 
 
