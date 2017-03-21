@@ -64,6 +64,20 @@
             border-radius: 15px;
         }
 
+        /*** CSS parra dropdown del menu ***/
+        .dropdown-menu{
+            background-color: #567;
+        }
+        .btn-tav{
+            background-color: #222;
+            color: #fff;
+            font-size: 18px;
+        }
+
+        .btn-tav:hover{
+            color: #fed136;
+        }
+
     </style>
 
         <!-- Company -->
@@ -131,10 +145,21 @@
                             <a class="page-scroll" href="#about">Premiaciones</a>
                         </li>
 
-                        <li>
+                        <!--<li>
                             <a href="#modalVariedades" class="portfolio-link" data-toggle="modal">variedades</a>
-                        </li>
+                        </li>-->
 
+                        <li>
+                            <div class="dropdown portfolio-link">
+                              <button class="btn dropdown-toggle btn-tav" type="button" data-toggle="dropdown">Variedades
+                              <span class="caret"></span></button>
+                              <ul class="dropdown-menu">
+                                <li><a href="#modalVariedades"  data-toggle="modal">variedades</a></li>
+                                <li><a href="#">CSS</a></li>
+                                <li><a href="#">JavaScript</a></li>
+                              </ul>
+                            </div>
+                        </li>
                         <li>
                             <a class="page-scroll" href="#contact">Contact</a>
                         </li>
