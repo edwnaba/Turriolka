@@ -69,7 +69,8 @@
             background-color: #567;
         }
         .btn-tav{
-            background-color: #222;
+            background: rgba(100,100,100,0);
+            /*background-color: #222;*/
             color: #fff;
             font-size: 18px;
         }
@@ -78,6 +79,9 @@
             color: #fed136;
         }
 
+        .btn-tav:focus{
+            color: #fed136;
+        }
     </style>
 
         <!-- Company -->
