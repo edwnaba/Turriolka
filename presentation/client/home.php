@@ -49,7 +49,9 @@
         }
         
         .fond1{
-            background-image: url("../../img/fondo1.jpg");
+
+            /*background-image: url("../../img/fondo1.jpg");*/
+            background-color: #aaa;
             width: 100%;
             height: 100%; 
         }
@@ -82,12 +84,34 @@
         .btn-tav:focus{
             color: #fed136;
         }
+
     </style>
 
         <!-- Company -->
         <script src="../../vendor/jquery/jquery.min.js"></script>
 
         <link href="../../css/companyStyles.css" rel="stylesheet" type="text/css"/>   
+
+        <style type="text/css">
+
+        .item2{
+        box-shadow: 1px 1px 10px rgba(0,0,0,0.7);
+        transition:box-shadow 1s, transform 500ms, filter 500ms ease-in-out; 
+        padding: 0px;
+        margin: 0px;
+        }
+
+
+        .item2:hover{
+        transform: scale(1.05);
+        box-shadow: 0px 0px 25px rgba(0,0,0,0.8);
+        } 
+
+        .blur{
+        filter: blur(3px);
+        transform: scale(0.95);
+        }
+    </style>
 
     </head>
 
@@ -386,10 +410,10 @@
                 <div class="col-lg-12">
                     <ul class="timeline">
                         <li>
-                            <div class="timeline-image">
+                            <div class="timeline-image item2">
                                 <img class="img-circle img-responsive" src="../../img/about/1.jpg" alt="">
                             </div>
-                            <div class="timeline-panel textTav">
+                            <div class="timeline-panel textTav item2">
                                 <div>
                                     <h4>2009-2011</h4>
                                     <h4 class="subheading">Feria del café</h4>
@@ -400,24 +424,26 @@
                             </div>
                         </li>
                         <li class="timeline-inverted">
-                            <div class="timeline-image">
+                            <div class="timeline-image item2">
                                 <img class="img-circle img-responsive" src="../../img/about/2.jpg" alt="">
                             </div>
-                            <div class="timeline-panel textTav">
+                            <div class="timeline-panel textTav item2">
                                 <div>
                                     <h4>Marzo 2012</h4>
                                     <h4 class="subheading">Segunda feria internacional del café</h4>
                                 </div>
-                                <div class="timeline-body">
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam!</p>
-                                </div>
+
+                             <div class="timeline-body">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam!</p>
+                            </div>
+
                             </div>
                         </li>
                         <li>
-                            <div class="timeline-image">
+                            <div class="timeline-image item2">
                                 <img class="img-circle img-responsive" src="../../img/about/3.png" alt="">
                             </div>
-                            <div class="timeline-panel textTav">
+                            <div class="timeline-panel textTav item2">
                                 <div>
                                     <h4>Diciembre 2012</h4>
                                     <h4 class="subheading">Feria nacional del café</h4>
@@ -428,10 +454,10 @@
                             </div>
                         </li>
                         <li class="timeline-inverted">
-                            <div class="timeline-image">
+                            <div class="timeline-image item2">
                                 <img class="img-circle img-responsive" src="../../img/about/4.png" alt="">
                             </div>
-                            <div class="timeline-panel textTav">
+                            <div class="timeline-panel textTav item2">
                                 <div>
                                     <h4>Julio 2014</h4>
                                     <h4 class="subheading">Feria internacional del café</h4>
@@ -441,7 +467,7 @@
                                 </div>
                             </li>
                             <li class="timeline-inverted">
-                                <div class="timeline-image">
+                                <div class="timeline-image item2">
                                     <h4>Seguimos
                                         <br>haciendo
                                         <br>Historia!</h4>
