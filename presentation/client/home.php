@@ -49,11 +49,9 @@
         }
         
         .fond1{
-
-            /*background-image: url("../../img/fondo1.jpg");*/
-            background-color: #aaa;
+            background-image: url("../../img/fondo1.jpg");
             width: 100%;
-            height: 100%; 
+            height: 100%;
         }
 
         .fond2{
@@ -410,8 +408,8 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <h2 class="section-heading">Premiaciones</h2>
-                    <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente</h3>
+                    <h2 class="section-heading" style="color: #ddd">Premiaciones</h2>
+                    <h3 class="section-subheading" style="color: #ddd">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente</h3>
                 </div>
             </div>
             <div class="row">
