@@ -116,6 +116,14 @@
                     </ul>
                 </li>
 
+                <li class="accordion">
+                    <a href="#"><i class="glyphicon glyphicon-plus"></i><span>Variedades</span></a>
+                    <ul class="nav nav-pills nav-stacked">
+                        <li><a href="ingresarVariedades.php">Ingresar variedades</a></li>
+                        <li><a href="#">Administrar variedades</a></li>
+                    </ul>
+                </li>
+
 
             </ul>
         </div>
