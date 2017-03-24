@@ -408,8 +408,8 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <h2 class="section-heading" style="color: #ddd">Premiaciones</h2>
-                    <h3 class="section-subheading" style="color: #ddd">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente</h3>
+                    <h2 class="section-heading">Premiaciones</h2>
+                    <h3 class="section-subheading">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente</h3>
                 </div>
             </div>
             <div class="row">
