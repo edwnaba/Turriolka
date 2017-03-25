@@ -31,6 +31,30 @@ if (isset($_SESSION['user'])) {
                 return false; // Evitar ejecutar el submit del formulario.
             }
         </script>
+
+
+        <style type="text/css">
+
+        .item2{
+        transition:box-shadow 2s, transform 500ms, filter 500ms ease-in-out; 
+        }
+
+
+        .item2:hover{
+        transform: scale(1.05);
+        box-shadow: 0px 0px 5px rgba(0,0,0,0.8);
+        } 
+
+        .blur{
+        filter: blur(3px);
+        transform: scale(0.95);
+        }
+
+        .mg-10{
+            margin-bottom: 10px;
+        }
+    </style>
+
     </head>
     <body>
         <!-- topbar ends -->
@@ -76,7 +100,7 @@ if (isset($_SESSION['user'])) {
                                     <div class="box col-md-6">
                                         <div class="box-inner">
                                             <div class="box-header well" data-original-title="">
-                                                <h2><i class="glyphicon glyphicon-th"></i>Imagen de Productos</h2>
+                                                <h2><i class="glyphicon glyphicon-th"></i> <?php echo $resultado[$index]->nombre .  " / " . $resultado[$index+1]->nombre ?> </h2>
                                                 <div class="box-icon">
                                                     <a href="#" class="btn btn-minimize btn-round btn-default"><i
                                                             class="glyphicon glyphicon-chevron-up"></i></a>
@@ -84,34 +108,79 @@ if (isset($_SESSION['user'])) {
                                             </div>
                                             <div class="box-content">
                                                 <div class="row">
-                                                    <div class="col-md-6">
-                                                        <img src="./img/productos/<?php echo $resultado[$index]->nombreImagen ?>" class="img-responsive"> <br/><br/>
-                                                        <input name="archivo" type="file"><br/> 
-                                                        <input name="imagen" type="text" class="form-control" placeholder="Titulo de la imagen" readonly value="<?php echo $resultado[$index]->nombreImagen ?>"> <br/> 
-                                                        <input name="precio" type="number" class="form-control" placeholder="Precio del producto"  value="<?php echo $resultado[$index]->precio ?>"> <br/>
-                                                        <button type="submit" class="btn btn-primary">Actualizar</button>
-                                                        <button type="button" onclick="eliminar(<?php echo "'" . $resultado[$index]->codigoProducto . "','" . $resultado[$index]->nombreImagen . "'" ?>)"class="btn btn-primary">Eliminar</button>
-                                                    </div>      
-                                                    <div class="col-md-6">
-                                                        <span class="badge">Español</span>
 
-                                                        <input name="nombre" type="text" class="form-control" placeholder="Nombre" value="<?php echo $resultado[$index]->nombre ?>"> <br/>
-                                                        <textarea name="descripcion" class="form-control" id="exampleInputPassword1" placeholder="Descripcion de la imagen" ><?php echo $resultado[$index]->descripcion ?></textarea><br/>
+                                                    <!--***************** Columna 1 ******************-->
+                                                    <div class="col-md-6">
+                                                            <!-- Imagen -->
+                                                        <img src="../../img/productos/<?php echo $resultado[$index]->nombreImagen ?>" class="img-responsive item2 img-thumbnail"> <br/><br/>
+                                                        <input name="imagen" class="form-control" type="file"><br/> 
 
-                                                        <span class="badge">Inglés</span>
-                                                        <input name="nombrein" type="text" class="form-control" placeholder="Titulo de la imagen" value="<?php echo $resultado[$index + 1]->nombre ?>"> <br/>
-                                                        <textarea name="descripcionin" class="form-control" id="exampleInputPassword1" placeholder="Descripcion de la imagen"><?php echo $resultado[$index + 1]->descripcion ?></textarea>
+                                                        <!-- Nombre español -->
+                                                        <span class="badge">Nombre del producto</span>
+
+                                                        <div class="input-group mg-10">
+                                                            <span class="input-group-addon" title="Español">Es</span>
+                                                            <input name="nombreEs" type="text" title="Español" class="form-control" placeholder="Nombre en Español" value="<?php echo $resultado[$index]->nombre ?>"> <br/> 
+                                                        </div>
+                                                        
+                                                        <!-- Nombre Inglés -->
+                                                        <div class="input-group mg-10">
+                                                            <span class="input-group-addon" title="Ingles">In</span>
+                                                            <input name="nombreIn" title="Ingles" type="text" class="form-control" placeholder="Nombre en Inglés" value="<?php echo $resultado[$index+1]->nombre ?>"> <br/>
+                                                        </div>
+                                                        
+                                                    </div>
+
+                                                    <!--***************** Columna 2 ******************-->
+                                                    <div class="col-md-6">
+
+                                                        <!-- Descripción corta -->
+                                                        <span class="badge">Descripción Corta</span>
+
+                                                        <!-- Español -->
+                                                        <div class="input-group mg-10">
+                                                            <span class="input-group-addon" title="Ingles">Es</span>
+                                                            <textarea name="descriCortaEs" type="text" class="form-control" placeholder="Descripción Corta Español" ><?php echo $resultado[$index]->descripcionCorta ?></textarea>
+                                                        </div>
+
+                                                        <!-- Inglés -->
+                                                        <div class="input-group mg-10">
+                                                            <span class="input-group-addon" title="Ingles">In</span>
+                                                            <textarea name="descriCortaIn" class="form-control" placeholder="Descripción Corta Ingles" ><?php echo $resultado[$index+1]->descripcionCorta ?></textarea>
+                                                        </div>
+
+
+                                                        <!-- Descripción Larga -->
+                                                        <span class="badge">Descripción Larga</span>
+
+                                                        <!-- Español -->
+                                                        <div class="input-group mg-10">
+                                                            <span class="input-group-addon" title="Ingles">Es</span>
+                                                            <textarea name="descriLargaEs" type="text" class="form-control" placeholder="Descripción Larga Español" ><?php echo $resultado[$index]->descripcionLarga ?></textarea>
+                                                        </div>
+
+                                                        <!-- Inglés -->
+                                                        <div class="input-group mg-10">
+                                                            <span class="input-group-addon" title="Ingles">In</span>
+                                                            <textarea name="descriLargaIn" class="form-control" id="exampleInputPassword1" placeholder="Descripción Larga Ingles" ><?php echo $resultado[$index+1]->descripcionLarga ?></textarea>
+                                                        </div>
+
+                                                        <!-- Botones -->
+                                                        <button type="submit" class="btn btn-primary item2">Actualizar</button>
+                                                        <button type="button" onclick="eliminar(<?php echo "'" . $resultado[$index]->codigoProducto . "','" . $resultado[$index]->nombreImagen . "'" ?>)"class="btn btn-primary item2">Eliminar</button>
                                                     </div>  
+
+
                                                     <div class="col-md-6">
                                                         <input style="visibility: hidden" name="codigo"  value="<?php echo $resultado[$index]->codigoProducto ?>"> <br/>
-                                                        <!--<input style="visibility: hidden" name="codigoin"  value="<?php // echo $resultado[$index + 1]->codigoProducto    ?>"> <br/>-->
+                                                        <input style="visibility: hidden" name="imagOriginal"  value="<?php echo $resultado[$index]->nombreImagen ?>"> <br/>
                                                     </div>  
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                 </form>
-                                <?php
+                            <?php
                             }
                             ?>
                         </div>          

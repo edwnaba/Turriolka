@@ -5,21 +5,21 @@ include_once '../Validaciones.php';
 
 $instValidaciones = new Validaciones();
 $resultValidaRecibidos = $instValidaciones->validaRecibidos(
-        array('precio', 'nombre', 'descripcion', 'nombrein', 'descripcionin', 'imagen', 'codigo'));
+        array('nombreEs', 'nombreIn', 'descriCortaEs', 'descriCortaIn', 'descriLargaEs', 'descriLargaIn', 'codigo'));
 
 /* Si se recibieron todos los datos esperados */
 if (($resultValidaRecibidos == 1)) {
-    $precio = $_POST['precio']; //Solo es un precio
 
-    $nombre = $_POST['nombre'];
-    $descripcion = $_POST['descripcion'];
+    $nombreEs = $_POST['nombreEs'];
+    $nombreIn = $_POST['nombreIn'];
 
-    $nombrein = $_POST['nombrein'];
-    $descripcionin = $_POST['descripcionin'];
+    $descriCortaEs = $_POST['descriCortaEs'];
+    $descriCortaIn = $_POST['descriCortaIn'];
+
+    $descriLargaEs = $_POST['descriLargaEs'];
+    $descriLargaIn = $_POST['descriLargaIn'];
 
     $codigo = $_POST['codigo'];
-//    $codigoin = $_POST['codigoin'];
-    $imagen = $_POST['imagen'];
 
     /*
      * Una ves que se asegura que se recibieron los datos deseados, se validan campos vacios o
@@ -27,33 +27,27 @@ if (($resultValidaRecibidos == 1)) {
      */
 
     //Se hace el llamado a la funcion que valida campos vacios.
-    $resultValidaVacios = $instValidaciones->validaVacios(array($nombre, $precio, $descripcion,
-        $nombrein, $descripcionin, $codigo,));
-
-    //Se hace el llamado a la funcion que valida campos numericos.	
-    $resultValidaNumericos = $instValidaciones->validaNumericos(array($precio));
+    $resultValidaVacios = $instValidaciones->validaVacios(array($nombreEs, $nombreIn, $descriCortaEs,
+        $descriCortaIn, $descriLargaEs, $descriLargaIn,$codigo));
 
     //Se interpretan los resultados de las validaciones.
     if (!$resultValidaVacios) {
         header("location: ../../Presentation/Admin/administrarProductos.php?msg=Todos los datos deben ser ingresados.");
-    } elseif (!$resultValidaNumericos) {
-        header("location: ../../Presentation/Admin/administrarProductos.php?msg=ERROR de formato, asegurese de ingresar solo numeros en los campos numericos.");
     } else {
-        $permitidos = array("image/jpg", "image/jpeg", "image/gif", "image/png");
 
-        //validar archivo
-//        $resultadoArchivo = $instValidaciones->validarArchivo('archivo');
-        if ($instValidaciones->validarArchivo('archivo')) {
-//             validar extensiones
-            if ($instValidaciones->validarExtensiones('archivo')) {
-                $ruta = "../../Presentation/Admin/img/productos/" . $_FILES['archivo']['name'];
+        /******* validar archivo ********/
+        if ($instValidaciones->validarArchivo('imagen')) {
+
+            /* validar extensiones */
+            if ($instValidaciones->validarExtensiones('imagen')) {
+                $ruta = "../../img/productos/" . $_FILES['imagen']['name'];
                 if (!file_exists($ruta)) {
 
-                    unlink("../../Presentation/Admin/img/productos/" . $imagen);
-                    $resultado = @move_uploaded_file($_FILES['archivo']['tmp_name'], $ruta);
+                    unlink("../../img/productos/" . $_POST['imagOriginal']);
+                    $resultado = @move_uploaded_file($_FILES['imagen']['tmp_name'], $ruta);
                     if ($resultado) {
-                        $productoEs = new Producto(0, $nombre, $precio, $descripcion, 0, $codigo, $_FILES['archivo']['name']);
-                        $productoIn = new Producto(0, $nombrein, $precio, $descripcionin, 1, $codigo, $_FILES['archivo']['name']);
+                        $productoEs = new Producto(0, $nombreEs, $descriCortaEs, $descriLargaEs, 0, $codigo, $_FILES['imagen']['name']);
+                        $productoIn = new Producto(0, $nombreIn, $descriCortaIn, $descriLargaIn, 0, $codigo, $_FILES['imagen']['name']);
                         $instBusiness = new ProductoBusiness();
                         $instBusiness->actualizarProductosEsBusiness($productoEs);
                         $instBusiness->actualizarProductosInBusiness($productoIn);
@@ -69,12 +63,12 @@ if (($resultValidaRecibidos == 1)) {
                 header("location: ../../Presentation/Admin/administrarProductos.php?msg=El formato del archivo no es permitido. Ingrese una imagen en formato jpg o png.");
             }
         } else {
-            $productoEs = new Producto(0, $nombre, $precio, $descripcion, 0, $codigo, $imagen);
-            $productoIn = new Producto(0, $nombrein, $precio, $descripcionin, 1, $codigo, $imagen);
+            $productoEs = new Producto(0, $nombreEs, $descriCortaEs, $descriLargaEs, 0, $codigo, $_POST['imagOriginal']);
+            $productoIn = new Producto(0, $nombreIn, $descriCortaIn, $descriLargaIn, 0, $codigo, $_POST['imagOriginal']);
             $instBusiness = new ProductoBusiness();
             $instBusiness->actualizarProductosEsBusiness($productoEs);
             $instBusiness->actualizarProductosInBusiness($productoIn);
-            header("location: ../../Presentation/Admin/administrarProductos.php?result=success&msg=Inserción realizada con éxito.");
+            header("location: ../../Presentation/Admin/administrarProductos.php?result=success&msg=Actualización realizada con éxito.");
         }
     }
 } else {

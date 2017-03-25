@@ -7,17 +7,17 @@ class Producto {
 
     public $id;
     public $nombre;
-    public $precio;
-    public $descripcion;
+    public $descripcionCorta;
+    public $descripcionLarga;
     public $idioma;
     public $codigoProducto;
     public $nombreImagen;
 
-    function Producto($id, $nombre, $precio, $descripcion, $idioma, $codigoProducto, $nombreImagen) {
+    function Producto($id, $nombre, $descripcionCorta, $descripcionLarga, $idioma, $codigoProducto, $nombreImagen) {
         $this->id = $id;
         $this->nombre = $nombre;
-        $this->precio = $precio;
-        $this->descripcion = $descripcion;
+        $this->descripcionCorta = $descripcionCorta;
+        $this->descripcionLarga = $descripcionLarga;
         $this->idioma = $idioma;
         $this->codigoProducto = $codigoProducto;
         $this->nombreImagen = $nombreImagen;

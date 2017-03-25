@@ -115,4 +115,14 @@ DELIMITER ;
 --  call ActualizarProducto('4565656','7uh76h','frfr5',1,0,'dfsdgs');
 --  call EliminarImagenDeInicio(0);
 
+CREATE DEFINER=`root`@`localhost` PROCEDURE `ObtenerTodosProductos`(IN `atIdioma_` INT)
+    NO SQL
+IF(atIdioma_ = -1)THEN
+        select * from tu_producto;
+    ELSE
 
+       select * from tu_producto where atIdioma = atIdioma_;
+
+    end if$$
+
+DELIMITER ;
