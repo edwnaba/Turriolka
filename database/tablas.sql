@@ -1,4 +1,4 @@
-drop database turriolkadb;
+
 create database turriolkadb;
 use turriolkadb;
 
@@ -71,20 +71,14 @@ CREATE TABLE IF NOT EXISTS `tu_variedad` (
   `atRequerimientosNutricionales` int NOT NULL,
   `atTamanoFruto` int NOT NULL,
   `atColor` text NOT NULL,
-
   `atMaduracion` text NOT NULL,
   `atRendimientoCereza` text NOT NULL,
   `atDensidad` text NOT NULL,
   `atInformacionAdicional` text,
-
   `atDerechoPropiedad` text NOT NULL,
   `atObtentor` text NOT NULL,
   `atdescripcionGenetica` text NOT NULL,
   `atFamilia` text,
-
-   `atDescripcionURL` text,
-   `atURL` text,
-  
   `atIdioma` int NOT NULL
 ) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
 

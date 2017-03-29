@@ -53,7 +53,7 @@ if (isset($_SESSION['user'])) {
                         ?>
 
 
-                        <form action="../../Business/Producto/ProductoInsertarAccion.php" method="POST" enctype="multipart/form-data" >
+                        <form action="../../Business/Variedades/VariedadesInsertAccion.php" method="POST" enctype="multipart/form-data" >
                             <div class="box col-md-12">
                                 <div class="box-inner">
                                     <div class="box-header well" data-original-title="">
@@ -66,10 +66,10 @@ if (isset($_SESSION['user'])) {
                                     <div class="box-content">
                                         <div class="row">
                                             <div class="col-md-6">
-                                                <input type="text" class="form-control" name="nombreEs" placeholder="Digite el nombre de la variedad" > <br/>
+                                                <input type="text" class="form-control" name="nombreEs" id="nombreEs" placeholder="Digite el nombre de la variedad" > <br/>
                                             </div> 
                                             <div class="col-md-6">
-                                                <textarea class="form-control" id="exampleInputPassword1" name="descripcionEs"  placeholder="Digite la descripción de la variedad"></textarea><br/>
+                                                <textarea class="form-control" id="descripcionEs" name="descripcionEs"  placeholder="Digite la descripción de la variedad"></textarea><br/>
                                             </div>
 
                                             <div class="col-md-12">
@@ -80,12 +80,12 @@ if (isset($_SESSION['user'])) {
                                                 <p>Potencial de calidad mostrado en altura:</p>  
                                             </div>
                                             <div class="col-md-3" class="dropdown">
-                                                <select name="a" id="a" class="btn btn-default dropdown-toggle">
-                                                   <option value="asd">Muy Bajo</option>
-                                                    <option value="asd">Bajo</option>
-                                                    <option value="asd">Bueno</option>
-                                                    <option value="asd">Muy Bueno</option>
-                                                    <option value="asd">Excepcional</option>
+                                                <select name="calidad" id="calidad" class="btn btn-default dropdown-toggle">
+                                                    <option value="1">Muy Bajo</option>
+                                                    <option value="2">Bajo</option>
+                                                    <option value="3">Bueno</option>
+                                                    <option value="4">Muy Bueno</option>
+                                                    <option value="5">Excepcional</option>
                                                 </select>
                                                 <br>
                                             </div>  
@@ -94,12 +94,12 @@ if (isset($_SESSION['user'])) {
                                                 <p>Pontencial de rendimiento</p>  
                                             </div>
                                             <div class="col-md-3" class="dropdown">
-                                                <select name="a" id="a" class="btn btn-default dropdown-toggle">
-                                                    <option value="asd">Bajo</option>
-                                                    <option value="asd">Medio</option>
-                                                    <option value="asd">Parecido a la Caturra</option>
-                                                    <option value="asd">Alta</option>
-                                                    <option value="asd">Muy Alta</option>
+                                                <select name="potencial" id="potencial" class="btn btn-default dropdown-toggle">
+                                                    <option value="1">Bajo</option>
+                                                    <option value="2">Medio</option>
+                                                    <option value="3">Parecido a la Caturra</option>
+                                                    <option value="4">Alta</option>
+                                                    <option value="5">Muy Alta</option>
                                                 </select>
                                                 <br>
                                             </div>
@@ -112,9 +112,9 @@ if (isset($_SESSION['user'])) {
                                                 <p>Altura</p>  
                                             </div>
                                             <div class="col-md-3" class="dropdown">
-                                                <select name="a" id="a" class="btn btn-default dropdown-toggle">
-                                                    <option value="asd">Bajo/Compacto</option>
-                                                    <option value="asd">Alto</option>
+                                                <select name="altura" id="altura" class="btn btn-default dropdown-toggle">
+                                                    <option value="1">Bajo/Compacto</option>
+                                                    <option value="2">Alto</option>
                                                 </select>
                                                 <br>
                                             </div>
@@ -123,7 +123,7 @@ if (isset($_SESSION['user'])) {
                                                 <p>La altitud optima</p>  
                                             </div>
                                             <div class="col-md-3" class="dropdown">
-                                                <input type="text" class="form-control" name="nombreEs" placeholder="Digite la altitud optima" >
+                                                <input type="text" class="form-control" name="altitud" id="altitud" placeholder="Digite la altitud optima" >
                                                 <br> 
                                             </div>
                                             <div class="col-md-12">
@@ -134,10 +134,10 @@ if (isset($_SESSION['user'])) {
                                                 <p>Roya del cafe</p>  
                                             </div>
                                             <div class="col-md-3" class="dropdown">
-                                               <select name="a" id="a" class="btn btn-default dropdown-toggle">
-                                                    <option value="asd">Resistente</option>
-                                                    <option value="asd">Tolerante</option>
-                                                    <option value="asd">Susceptible</option>
+                                               <select name="tolerancia" id="tolerancia" class="btn btn-default dropdown-toggle">
+                                                    <option value="1">Resistente</option>
+                                                    <option value="2">Tolerante</option>
+                                                    <option value="3">Susceptible</option>
                                                 </select>
                                                 <br>
                                             </div>
@@ -147,10 +147,10 @@ if (isset($_SESSION['user'])) {
                                                 <p>Nematodos</p>  
                                             </div>
                                             <div class="col-md-3" class="dropdown">
-                                               <select name="a" id="a" class="btn btn-default dropdown-toggle">
-                                                    <option value="asd">Resistente</option>
-                                                    <option value="asd">Tolerante</option>
-                                                    <option value="asd">Susceptible</option>
+                                               <select name="nematodos" id="nematodos" class="btn btn-default dropdown-toggle">
+                                                    <option value="1">Resistente</option>
+                                                    <option value="2">Tolerante</option>
+                                                    <option value="3">Susceptible</option>
                                                 </select>
                                                 <br>
                                             </div>
@@ -162,10 +162,10 @@ if (isset($_SESSION['user'])) {
                                                 <p>Antracnosis de la cereza(CBD)</p>  
                                             </div>
                                             <div class="col-md-3" class="dropdown">
-                                               <select name="a" id="a" class="btn btn-default dropdown-toggle">
-                                                    <option value="asd">Resistente</option>
-                                                    <option value="asd">Tolerante</option>
-                                                    <option value="asd">Susceptible</option>
+                                               <select name="antracnosis" id="antracnosis" class="btn btn-default dropdown-toggle">
+                                                    <option value="1">Resistente</option>
+                                                    <option value="2">Tolerante</option>
+                                                    <option value="3">Susceptible</option>
                                                 </select>
                                                 <br>
                                             </div>
@@ -175,10 +175,10 @@ if (isset($_SESSION['user'])) {
                                                 <p>Años para la primera cosecha</p>  
                                             </div>
                                             <div class="col-md-3" class="dropdown">
-                                               <select name="a" id="a" class="btn btn-default dropdown-toggle">
-                                                    <option value="asd">Temprana</option>
-                                                    <option value="asd">Promedio</option>
-                                                    <option value="asd">Tardía</option>
+                                               <select name="anos" id="anos" class="btn btn-default dropdown-toggle">
+                                                    <option value="1">Temprana</option>
+                                                    <option value="2">Promedio</option>
+                                                    <option value="3">Tardía</option>
                                                 </select>
                                                 <br>
                                             </div>
@@ -190,11 +190,11 @@ if (isset($_SESSION['user'])) {
                                                 <p>Requerimientos nutricionales</p>  
                                             </div>
                                             <div class="col-md-3" class="dropdown">
-                                               <select name="a" id="a" class="btn btn-default dropdown-toggle">
-                                                    <option value="asd">Muy Alta</option>
-                                                    <option value="asd">Alta</option>
-                                                    <option value="asd">Media</option>
-                                                    <option value="asd">Baja</option>
+                                               <select name="nutricionales" id="nutricionales" class="btn btn-default dropdown-toggle">
+                                                    <option value="1">Muy Alta</option>
+                                                    <option value="2">Alta</option>
+                                                    <option value="3">Media</option>
+                                                    <option value="4">Baja</option>
                                                 </select>
                                                 <br>
                                             </div>
@@ -204,11 +204,11 @@ if (isset($_SESSION['user'])) {
                                                 <p>Tamaño del fruto</p>  
                                             </div>
                                             <div class="col-md-3" class="dropdown">
-                                               <select name="a" id="a" class="btn btn-default dropdown-toggle">
-                                                    <option value="asd">Pequeños</option>
-                                                    <option value="asd">Promedio</option>
-                                                    <option value="asd">Grandes</option>
-                                                    <option value="asd">Muy Grandes</option>
+                                               <select name="tamano" id="tamano" class="btn btn-default dropdown-toggle">
+                                                    <option value="1">Pequeños</option>
+                                                    <option value="2">Promedio</option>
+                                                    <option value="3">Grandes</option>
+                                                    <option value="4">Muy Grandes</option>
                                                 </select>
                                                 <br>
                                             </div>
@@ -220,12 +220,12 @@ if (isset($_SESSION['user'])) {
                                                 <p>Color del brote de las hojas</p>  
                                             </div>
                                             <div class="col-md-3" class="dropdown">
-                                               <select name="a" id="a" class="btn btn-default dropdown-toggle">
-                                                    <option value="asd">Verde</option>
-                                                    <option value="asd">Bronce Claro</option>
-                                                    <option value="asd">Bronce</option>
-                                                    <option value="asd">Bronce Oscuro</option>
-                                                    <option value="asd">Verde o Bronce</option>
+                                               <select name="color" id="color" class="btn btn-default dropdown-toggle">
+                                                    <option value="Verde">Verde</option>
+                                                    <option value="Bronce Claro">Bronce Claro</option>
+                                                    <option value="Bronce">Bronce</option>
+                                                    <option value="Bronce Oscuro">Bronce Oscuro</option>
+                                                    <option value="Verde o Bronce">Verde o Bronce</option>
                                                 </select>
                                                 <br>
                                             </div>
@@ -235,11 +235,11 @@ if (isset($_SESSION['user'])) {
                                                 <p>Maduración de la fruta</p>  
                                             </div>
                                             <div class="col-md-3" class="dropdown">
-                                               <select name="a" id="a" class="btn btn-default dropdown-toggle">
-                                                    <option value="asd">Temprana</option>
-                                                    <option value="asd">Promedio</option>
-                                                    <option value="asd">Tardía</option>
-                                                    <option value="asd">Muy Tardía</option>
+                                               <select name="maduracion" id="maduracion" class="btn btn-default dropdown-toggle">
+                                                    <option value="Temprana">Temprana</option>
+                                                    <option value="Promedio">Promedio</option>
+                                                    <option value="Tardía">Tardía</option>
+                                                    <option value="Muy Tardía">Muy Tardía</option>
                                                 </select>
                                                 <br>
                                             </div>
@@ -251,11 +251,11 @@ if (isset($_SESSION['user'])) {
                                                 <p>Rendimiento de la cereza a grano pergamino</p>  
                                             </div>
                                             <div class="col-md-3" class="dropdown">
-                                               <select name="a" id="a" class="btn btn-default dropdown-toggle">
-                                                    <option value="asd">Bajo</option>
-                                                    <option value="asd">Promedio</option>
-                                                    <option value="asd">Alto</option>
-                                                    <option value="asd">Muy Alto</option>
+                                               <select name="rendimiento" id="rendimiento" class="btn btn-default dropdown-toggle">
+                                                    <option value="Bajo">Bajo</option>
+                                                    <option value="Promedio">Promedio</option>
+                                                    <option value="Alto">Alto</option>
+                                                    <option value="Muy Alto">Muy Alto</option>
                                                 </select>
                                                 <br>
                                             </div>
@@ -265,10 +265,10 @@ if (isset($_SESSION['user'])) {
                                                 <p>Densidad de la siembra</p>  
                                             </div>
                                             <div class="col-md-5" class="dropdown">
-                                               <select name="a" id="a" class="btn btn-default dropdown-toggle">
-                                                    <option value="asd">Similar al Bórbon(3000-4000 plntas por ha)</option>
-                                                    <option value="asd">Similar al Hibrido F1(4000-5000 plntas por ha)</option>
-                                                    <option value="asd">Similar al Caturra(5000-6000 plntas por ha)</option>
+                                               <select name="densidad" id="densidad" class="btn btn-default dropdown-toggle">
+                                                    <option value="1">Similar al Bórbon(3000-4000 plntas por ha)</option>
+                                                    <option value="2">Similar al Hibrido F1(4000-5000 plntas por ha)</option>
+                                                    <option value="3">Similar al Caturra(5000-6000 plntas por ha)</option>
                                                 </select>
                                                 <br>
                                             </div>
@@ -280,7 +280,7 @@ if (isset($_SESSION['user'])) {
                                                 <p>Información agronómica adicional</p>  
                                             </div>
                                             <div class="col-md-3" class="dropdown">
-                                                <input type="text" class="form-control" name="nombreEs" placeholder="Digite la altitud optima" >
+                                                <input type="text" class="form-control" name="informacionEs" id="informacionEs" placeholder="Digite la altitud optima" >
                                                 <br> 
                                             </div>
 
@@ -288,7 +288,7 @@ if (isset($_SESSION['user'])) {
                                                 <p>Derecho de propiedad intelectual</p>  
                                             </div>
                                             <div class="col-md-3" class="dropdown">
-                                                <input type="text" class="form-control" name="nombreEs" placeholder="Digite la altitud optima" >
+                                                <input type="text" class="form-control" name="derechoEs"  id="derechoEs" placeholder="Digite la altitud optima" >
                                                 <br> 
                                             </div>
                                             <div class="col-md-12">
@@ -299,7 +299,7 @@ if (isset($_SESSION['user'])) {
                                                 <p>Obtentor</p>  
                                             </div>
                                             <div class="col-md-3" class="dropdown">
-                                                <input type="text" class="form-control" name="nombreEs" placeholder="Digite la altitud optima" >
+                                                <input type="text" class="form-control" name="obtentorEs" id="obtentorEs" placeholder="Digite la altitud optima" >
                                                 <br> 
                                             </div>
 
@@ -307,7 +307,7 @@ if (isset($_SESSION['user'])) {
                                                 <p>Descripción Genética</p>  
                                             </div>
                                             <div class="col-md-3" class="dropdown">
-                                                <input type="text" class="form-control" name="nombreEs" placeholder="Digite la altitud optima" >
+                                                <input type="text" class="form-control" name="geneticaEs" id="geneticaEs" placeholder="Digite la altitud optima" >
                                                 <br> 
                                             </div>
                                             <div class="col-md-12">
@@ -318,7 +318,7 @@ if (isset($_SESSION['user'])) {
                                                 <p>Familia</p>  
                                             </div>
                                             <div class="col-md-3" class="dropdown">
-                                                <input type="text" class="form-control" name="nombreEs" placeholder="Digite la altitud optima" >
+                                                <input type="text" class="form-control" name="familiaEs" id="familiaEs" placeholder="Digite la altitud optima" >
                                                 <br> 
                                             </div>
                                             <div class="col-md-12">
@@ -344,46 +344,7 @@ if (isset($_SESSION['user'])) {
                                     </div>
                                 </div>
                             </div>
-                             <div class="box col-md-12">
-                                <div class="box-inner">
-                                    <div class="box-header well" data-original-title="">
-                                        <h2><i class="glyphicon glyphicon-th"></i>Ingresar Variedades en Inglés</h2>
-                                        <div class="box-icon">
-                                            <a href="#" class="btn btn-minimize btn-round btn-default"><i
-                                                    class="glyphicon glyphicon-chevron-up"></i></a>
-                                        </div>
-                                    </div>
-                                    <div class="box-content">
-                                        <div class="row">
-                                            <div class="col-md-6">
-                                                <span class="badge">Español</span>
-                                                <input type="text" class="form-control" name="nombreEs" placeholder="Digite el nombre del producto en español." > <br/>
-                                                <textarea class="form-control" id="exampleInputPassword1" name="descripcionEs"  placeholder="Digite la descripción del producto en español."></textarea><br/>
-
-                                                <span class="badge">Inglés</span>
-                                                <input type="text" class="form-control" name="nombreIn" placeholder="Digite el nombre del producto en inglés." > <br/>
-                                                <textarea class="form-control" id="exampleInputPassword1" name="descripcionIn" placeholder="Digite la descripción del producto en inglés."></textarea>
-
-                                            </div> 
-                                            <div class="col-md-6">
-                                                <input type="number" name="precio" class="form-control" placeholder="Digite el precio del producto." > <br/>   
-                                            </div>  
-                                            <div class="col-md-6">
-                                                <!--<img src="img/gal7.png" class="img-responsive"> <br/><br/>-->
-                                                <input type="file" id="files" name="archivo" />
-                                                <br />
-                                                <output id="list" ></output>
-                                                <br />
-                                                <button type="submit" class="btn btn-primary">Ingresar</button>
-                                                <!--<button type="submit" class="btn btn-primary">Eliminar</button>-->
-                                            </div>      
-
-
-                                        </div>
-
-                                    </div>
-                                </div>
-                            </div>
+                            
 
 
                         </form>
