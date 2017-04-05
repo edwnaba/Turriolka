@@ -65,12 +65,13 @@ class ProductoData extends Connector {
     //Insercion es solo una general, por ende no es publico ya que no tiene metodos especificos.
     function insertProductoData($productoEs, $productoIn) {
         /* Primero se obtiene el nuevo codigo de producto */
-        $resultCodigo = $this->exeQuery("select max(atcodigoProducto) from la_productos");
+        $resultCodigo = $this->exeQuery("select max(atcodigoProducto) from tu_producto");
         $codigoProducto = (mysqli_fetch_array($resultCodigo)[0]) + 1;
-        $queryEs = "call InsertarProducto(" . $productoEs->id . ", '" . $productoEs->nombre . "'," .
-                $productoEs->descripcionCorta . ", '" . $productoEs->descripcionLarga . "', " . $productoEs->idioma . ", " . $codigoProducto . ",'" . $productoEs->nombreImagen . "')";
-        $queryIn = "call InsertarProducto(" . $productoIn->id . ", '" . $productoIn->nombre . "'," .
-                $productoIn->descripcionCorta . ", '" . $productoIn->descripcionLarga . "', " . $productoIn->idioma . ", " . $codigoProducto . ",'" . $productoEs->nombreImagen . "')";
+        $queryEs = "call InsertarProducto(" . $productoEs->id . ", '" . $productoEs->nombre . "','" .
+                $productoEs->descripcionCorta . "', '" . $productoEs->descripcionLarga . "', " . $productoEs->idioma . ", " . $codigoProducto . ",'" . $productoEs->nombreImagen . "')";
+        
+        $queryIn = "call InsertarProducto(" . $productoIn->id . ", '" . $productoIn->nombre . "','" .
+                $productoIn->descripcionCorta . "', '" . $productoIn->descripcionLarga . "', " . $productoIn->idioma . ", " . $codigoProducto . ",'" . $productoEs->nombreImagen . "')";
         $result = $this->exeQuery($queryEs);
         $result = $this->exeQuery($queryIn);
         return $result;

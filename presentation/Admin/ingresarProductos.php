@@ -67,16 +67,16 @@ if (isset($_SESSION['user'])) {
                                         <div class="row">
                                             <div class="col-md-6">
                                                 <span class="badge">Español</span>
-                                                <input type="text" class="form-control" name="nombreEs" placeholder="Digite el nombre del producto en español." > <br/>
-                                                <textarea class="form-control" id="exampleInputPassword1" name="descripcionEs"  placeholder="Digite la descripción del producto en español."></textarea><br/>
-
-                                                <span class="badge">Inglés</span>
-                                                <input type="text" class="form-control" name="nombreIn" placeholder="Digite el nombre del producto en inglés." > <br/>
-                                                <textarea class="form-control" id="exampleInputPassword1" name="descripcionIn" placeholder="Digite la descripción del producto en inglés."></textarea>
+                                                <input type="text" class="form-control" name="nombreEs" placeholder="Nombre Español." > <br/>
+                                                <textarea class="form-control" name="descripcionCortaEs"  placeholder="Descripción Corta Español."></textarea><br/>
+                                                <textarea class="form-control" name="descripcionLargaEs"  placeholder="Descripción Larga Español"></textarea><br/>
 
                                             </div> 
                                             <div class="col-md-6">
-                                                <input type="number" name="precio" class="form-control" placeholder="Digite el precio del producto." > <br/>   
+                                                <span class="badge">Inglés</span>
+                                                <input type="text" class="form-control" name="nombreIn" placeholder="Nombre Inglés." > <br/>
+                                                <textarea class="form-control" name="descripcionCortaIn"  placeholder="Descripción Corta Inglés."></textarea><br/>
+                                                <textarea class="form-control" name="descripcionLargaIn"  placeholder="Descripción Larga Inglés"></textarea><br/>
                                             </div>  
                                             <div class="col-md-6">
                                                 <!--<img src="img/gal7.png" class="img-responsive"> <br/><br/>-->
