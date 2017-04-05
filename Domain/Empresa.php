@@ -6,46 +6,33 @@
  * @author Gustavo
  */
 class Empresa {
-    public $Id;
+    public $id;
     public $historia;
-    public $quinesSomos;
-    public $descripcionGaleria;
-    public $elaboracion;
-    public $descripcionProductoA;
-    public $elaboracionProductoB;
-    public $denominacion;
-    public $descripcionContactos;
-    public $direccion;
-    public $correo;
-    public $telefonoA;
-    public $telefonoB;
-    public $encargadoA;
-    public $encargadoB;
+    public $quienesSomos;
     public $mision;
     public $vision;
+    public $descripcionProductos;
+    public $descripcionGaleria;
+    public $descripcionPremios;
+    public $direccion;
+    public $correo;
+    public $telefono;
     public $idioma;
     
-    public function Empresa($Id, $historia, $quinesSomos, $descripcionGaleria, $elaboracion, $descripcionProductoA,
-        $elaboracionProductoB, $denominacion, $descripcionContactos, $direccion, $correo, $telefonoA, $telefonoB, 
-        $encargadoA, $encargadoB, $mision, $vision, $idioma){
+    public function Empresa($id, $historia, $quienesSomos, $mision, $vision, $descripcionProductos,
+        $descripcionGaleria, $descripcionPremios, $direccion, $correo, $telefono, $idioma){
 
-        $this->Id = $Id;
+        $this->id = $id;
         $this->historia = $historia;
-        $this->quinesSomos = $quinesSomos;
-        $this->descripcionGaleria = $descripcionGaleria;
-        $this->elaboracion = $elaboracion;
-        $this->descripcionProductoA = $descripcionProductoA;
-        $this->elaboracionProductoB = $elaboracionProductoB;
-        $this->denominacion = $denominacion;
-        $this->descripcionContactos = $descripcionContactos;
-        $this->direccion = $direccion;
-        $this->correo = $correo;
-        $this->telefonoA = $telefonoA;
-        $this->telefonoB = $telefonoB;
-        $this->encargadoA = $encargadoA;
-        $this->encargadoB = $encargadoB;
+        $this->quienesSomos = $quienesSomos;
         $this->mision = $mision;
         $this->vision = $vision;
+        $this->descripcionProductos = $descripcionProductos;
+        $this->descripcionGaleria = $descripcionGaleria;
+        $this->descripcionPremios = $descripcionPremios;
+        $this->direccion = $direccion;
+        $this->correo = $correo;
+        $this->telefono = $telefono;
         $this->idioma = $idioma;
     }
 }

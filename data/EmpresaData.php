@@ -1,6 +1,6 @@
 <?php
 
-include_once 'Data.php';
+include_once 'Connector.php';
 include_once '../../Domain/Empresa.php';
 
 /*
@@ -8,7 +8,7 @@ include_once '../../Domain/Empresa.php';
  * relacionadas a la tabla la_empresa
  */
 
-class EmpresaData extends Data {
+class EmpresaData extends Connector {
     /*
      * ************* Métodos específicos *************
      */
@@ -39,24 +39,27 @@ class EmpresaData extends Data {
 
     //funcion para obtener todos los datos de la empresa
     private function getEmpresaData($idioma) {
-        $query = "select * from la_empresa where atIdioma = " . $idioma;
+        $query = "select * from tu_empresa where atIdioma = " . $idioma;
         $result = $this->exeQuery($query);
         $miEmpresa = NULL;
         if ($row = mysqli_fetch_array($result)) {
-            $miEmpresa = new Empresa($row['atId'], $row['atHistoria'], $row['atQuinesSomos'], $row['atDescripcionGaleria'], $row['atElaboracion'], $row['atDescripcionProductoA'], $row['atElaboracionProductoB'], $row['atDenominacion'], $row['atDescripcionContactos'], $row['atDireccion'], $row['atCorreo'], $row['atTelefonoA'], $row['atTelefonoB'], $row['atEncargadoA'], $row['atEncargadoB'], $row['atMision'], $row['atVision'], $row['atIdioma']);
+            $miEmpresa = new Empresa(
+                $row['atId'], $row['atHistoria'], $row['atQuienesSomos'], $row['atMision'], $row['atVision'],
+                $row['atDescripcionProductos'], $row['atDescripcionGaleria'], $row['atDescripcionPremios'], 
+                $row['atDireccion'], $row['atCorreo'], $row['atTelefono'], $row['atIdioma']);
         }
         return $miEmpresa;
     }
 
     //Actualiza la información de la empresa
     private function actualizaEmpresaData($empresa, $idioma) {
-        $query = "call ActualizarEmpresa(0, '" . $empresa->correo . "', '" . $empresa->denominacion . "', '" .
-                $empresa->descripcionContactos . "', '" . $empresa->descripcionGaleria . "', '" .
-                $empresa->descripcionProductoA . "', '" . $empresa->direccion . "', '" . $empresa->elaboracion .
-                "', '" . $empresa->elaboracionProductoB . "', '" . $empresa->encargadoA .
-                "', '" . $empresa->encargadoB . "', '" . $empresa->historia . "', '" . $empresa->vision .
-                "', '" . $empresa->mision . "', '" . $empresa->quinesSomos . "', " . $empresa->telefonoA .
-                ", " . $empresa->telefonoB . ", " . $idioma . ")";
+
+        $query = "call ActualizarEmpresa(0, '" . $empresa->historia . "', '" . $empresa->quienesSomos . "', '" .
+                $empresa->mision . "', '" . $empresa->vision . "', '" . $empresa->descripcionProductos . "', '" . 
+                $empresa->descripcionGaleria . "', '" . $empresa->descripcionPremios . "', '" . $empresa->direccion
+                . "', '" . $empresa->correo . "', " . $empresa->telefono .
+                ", " . $idioma . ")";
+
         $result = $this->exeQuery($query);
         return $result;
     }
