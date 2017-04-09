@@ -17,9 +17,9 @@ if (isset($_SESSION['user'])) {
 
         <?php 
             /* Se obtienen todas las imágenes */
-            /*include '../../Business/Galeria/GaleriaBusiness.php';
+            include '../../Business/Galeria/GaleriaBusiness.php';
             $instGaleriaBusiness = new GaleriaBusiness();
-            $listImage = $instGaleriaBusiness->obtenerImagenesGaleriaBusiness();*/
+            $listImage = $instGaleriaBusiness->obtenerImagenesGaleriaBusiness();
         ?>
     </head>
 
@@ -91,10 +91,10 @@ if (isset($_SESSION['user'])) {
                                     ?>
                                     <li id="<?php echo $tem->codigoImagen . '&' . $tem->nombre . '&galeria' ?>"
                                      class="thumbnail">
-                                        <a style="background:url(./img/galeria/<?php echo $tem->nombre ?>)"
-                                           title="Sample Image 1" href="./img/galeria/<?php echo $tem->nombre ?>">
+                                        <a style="background:url(../../img/Gallery/<?php echo $tem->nombre ?>)"
+                                           title="Sample Image 1" href="../../img/Gallery/<?php echo $tem->nombre ?>">
                                             <img 
-                                                class="grayscale" src="./img/galeria/<?php echo $tem->nombre ?>"
+                                                class="grayscale" src="../../img/Gallery/<?php echo $tem->nombre ?>"
                                                 alt="Sample Image 1">
                                         </a>
                                     </li>

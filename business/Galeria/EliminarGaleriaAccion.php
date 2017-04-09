@@ -6,7 +6,7 @@ $instGaleriaBusiness = new GaleriaBusiness();
 if (isset($_POST['id']) && $_POST['id'] != "") {
     $result = $instGaleriaBusiness->eliminarGaleriaBusiness($_POST['id']);
     if ($result) {
-        unlink("../../Presentation/Admin/img/galeria/" . $_POST['srcImage']);
+        unlink("../../img/Gallery/" . $_POST['srcImage']);
         echo 'true';
     } else {
         echo 'false';

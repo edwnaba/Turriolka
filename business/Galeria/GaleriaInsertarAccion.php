@@ -22,7 +22,7 @@ if (($resultValidaRecibidos == 1) && $resultadoArchivo == 1) {
         $permitidos = array("image/jpg", "image/jpeg", "image/gif", "image/png");
         // validar extensiones
         if ($instValidaciones->validarExtensiones('archivo')) {
-            $ruta = "../../Presentation/Admin/img/galeria/" . $_FILES['archivo']['name'];
+            $ruta = "../../img/Gallery/" . $_FILES['archivo']['name'];
             if (!file_exists($ruta)) {
                 $resultado = @move_uploaded_file($_FILES['archivo']['tmp_name'], $ruta);
                 if ($resultado) {
