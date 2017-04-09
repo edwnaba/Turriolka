@@ -70,7 +70,7 @@ if (isset($_SESSION['user'])) {
                                         <div class="box-content">
                                             <div class="row">
                                                 <div class="col-md-6">
-                                                    <img src="./img/galeria/<?php echo $resultado[$index]->nombre ?>" class="img-responsive"> <br/><br/>
+                                                    <img src="../../img/Gallery/<?php echo $resultado[$index]->nombre ?>" class="img-responsive"> <br/><br/>
                                                     <input name="archivo" type="file" >
                                                     <br/>
                                                     <button type="submit" class="btn btn-primary">Actualizar</button>

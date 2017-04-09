@@ -1,12 +1,12 @@
 <?php
 
 include_once '../../Domain/Galeria.php';
-include_once 'Data.php';
+include_once 'Connector.php';
 
 /**
  * Clase encargada de realizar las consultas en la Base de Datos relacionadas a Productos 
  */
-class GaleriaData extends Data {
+class GaleriaData extends Connector {
 
     //Insercion es solo una general, por ende no es publico ya que no tiene metodos especificos.
     function ingresarGaleriaData($imagen, $imagenin) {

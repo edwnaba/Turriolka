@@ -35,12 +35,12 @@ if (($resultValidaRecibidos == 1)) {
 //            echo $_FILES['archivo']['name'];
 //            exit;
             if ($instValidaciones->validarExtensiones('archivo')) {
-                $ruta = "../../Presentation/Admin/img/galeria/" . $_FILES['archivo']['name'];
+                $ruta = "../../img/Gallery/" . $_FILES['archivo']['name'];
                 if (!file_exists($ruta)) {
 
 
 
-                    unlink("../../Presentation/Admin/img/galeria/" . $imagen);
+                    unlink("../../img/Gallery/" . $imagen);
                     $resultado = @move_uploaded_file($_FILES['archivo']['tmp_name'], $ruta);
                     if ($resultado) {
 
