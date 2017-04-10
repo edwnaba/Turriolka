@@ -53,10 +53,12 @@ if (isset($_SESSION['user'])) {
                         include '../../Business/Galeria/GaleriaBusiness.php';
                         $instBusiness = new GaleriaBusiness();
                         $resultado = $instBusiness->obtenerImagenesGaleriaBusiness();
+                        $cont = 0;
                         for ($index = 0; $index < sizeof($resultado); $index = $index + 2) {
+                            $cont ++;
                             ?>
-                            <form method="POST" action="../../Business/Galeria/ActualizarGaleriaAccion.php" enctype="multipart/form-data">
-                                <div class="box col-md-6">
+                            <div class="box col-md-6">
+                                <form method="POST" action="../../Business/Galeria/ActualizarGaleriaAccion.php" enctype="multipart/form-data">
                                     <div class="box-inner">
                                         <div class="box-header well" data-original-title="">
                                             <h2><i class="glyphicon glyphicon-th"></i>Imagen de Galería</h2>
@@ -74,6 +76,7 @@ if (isset($_SESSION['user'])) {
                                                     <input name="archivo" type="file" >
                                                     <br/>
                                                     <button type="submit" class="btn btn-primary">Actualizar</button>
+                                                    <a class="btn btn-danger" href="../../Business/Galeria/EliminarGaleriaAccion.php?id=<?php echo $resultado[$index]->codigoImagen ?>">Eliminar</a>
                                                 </div>      
                                                 <div class="col-md-6">
                                                     <span class="badge">Español</span>
@@ -92,10 +95,11 @@ if (isset($_SESSION['user'])) {
 
                                         </div>
                                     </div>
-                                </div>
-                            </form>
-
-                            <?php
+                                
+                                </form>
+                            </div>
+                            <?php if(($cont%2) == 0) echo '<div class="clearfix"></div>'?>
+                        <?php
                         }
                         ?>
                     </div><!--/row-->

@@ -93,7 +93,6 @@
                     <ul class="nav nav-pills nav-stacked">
                         <li><a href="imagenesGaleria.php">Ingresar Imagen</a></li>
                         <li><a href="actualizarGaleria.php">Actualizar Imagen</a></li>
-                        <li><a href="eliminarImagenesGaleria.php">Eliminar Imagen</a></li>
                     </ul>
                 </li>
                 <li class="accordion">

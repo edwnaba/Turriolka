@@ -3,15 +3,15 @@
 include_once 'GaleriaBusiness.php';
 $instGaleriaBusiness = new GaleriaBusiness();
 /* Se valida el id */
-if (isset($_POST['id']) && $_POST['id'] != "") {
-    $result = $instGaleriaBusiness->eliminarGaleriaBusiness($_POST['id']);
+if (isset($_GET['id']) && $_GET['id'] != "") {
+    $result = $instGaleriaBusiness->eliminarGaleriaBusiness($_GET['id']);
     if ($result) {
         unlink("../../img/Gallery/" . $_POST['srcImage']);
-        echo 'true';
+        header("location: ../../Presentation/Admin/actualizarGaleria.php?msg=La imagen ha sido eliminada con éxito");
     } else {
-        echo 'false';
+    	header("location: ../../Presentation/Admin/actualizarGaleria.php?msg=No se ha logrado eliminar.");
     }
 } else {
-    echo 'false';
+    header("location: ../../Presentation/Admin/actualizarGaleria.php?msg=No se ha logrado eliminar.");
 }
 ?>
