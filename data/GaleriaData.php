@@ -11,7 +11,7 @@ class GaleriaData extends Connector {
     //Insercion es solo una general, por ende no es publico ya que no tiene metodos especificos.
     function ingresarGaleriaData($imagen, $imagenin) {
         /* Primero se obtiene el nuevo codigo de producto */
-        $resultCodigo = $this->exeQuery("select max(atcodigoImagen) from la_galeria");
+        $resultCodigo = $this->exeQuery("select max(atcodigoImagen) from tu_galeria");
         $codigoImagen = (mysqli_fetch_array($resultCodigo)[0]) + 1;
         $query = "call IngresarImagenEnGaleria('" . $imagen->nombre . "','" . $imagen->descripcion . "'," . $imagen->idioma . "," . $codigoImagen . ")";
         $result = $this->exeQuery($query);

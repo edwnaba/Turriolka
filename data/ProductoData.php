@@ -68,10 +68,10 @@ class ProductoData extends Connector {
         $resultCodigo = $this->exeQuery("select max(atcodigoProducto) from tu_producto");
         $codigoProducto = (mysqli_fetch_array($resultCodigo)[0]) + 1;
         $queryEs = "call InsertarProducto(" . $productoEs->id . ", '" . $productoEs->nombre . "','" .
-                $productoEs->descripcionCorta . "', '" . $productoEs->descripcionLarga . "', " . $productoEs->idioma . ", " . $codigoProducto . ",'" . $productoEs->nombreImagen . "')";
+                $productoEs->descripcionCorta . "', '" . $productoEs->descripcionLarga . "', " . 0 . ", " . $codigoProducto . ",'" . $productoEs->nombreImagen . "')";
         
         $queryIn = "call InsertarProducto(" . $productoIn->id . ", '" . $productoIn->nombre . "','" .
-                $productoIn->descripcionCorta . "', '" . $productoIn->descripcionLarga . "', " . $productoIn->idioma . ", " . $codigoProducto . ",'" . $productoEs->nombreImagen . "')";
+                $productoIn->descripcionCorta . "', '" . $productoIn->descripcionLarga . "', " . 1 . ", " . $codigoProducto . ",'" . $productoEs->nombreImagen . "')";
         $result = $this->exeQuery($queryEs);
         $result = $this->exeQuery($queryIn);
         return $result;

@@ -12,8 +12,9 @@ class Premio {
     public $ano;
     public $nombreImagen;
     public $idioma;
+    public $codigoPremio;
     
-    public function Empresa($id, $nombre, $descripcion, $ano, $nombreImagen, $idioma){
+    public function Premio($id, $nombre, $descripcion, $ano, $nombreImagen, $idioma, $codigoPremio){
 
         $this->id = $id;
         $this->nombre = $nombre;
@@ -21,5 +22,6 @@ class Premio {
         $this->ano = $ano;
         $this->nombreImagen = $nombreImagen;
         $this->idioma = $idioma;
+        $this->codigoPremio = $codigoPremio;
     }
 }

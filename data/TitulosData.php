@@ -5,10 +5,10 @@
  * relacionadas a la tabla la_titulos
  * @author Daylan Chavarria
  */
-//include 'Data.php';
+include_once 'Connector.php';
 include_once '../../Domain/Titulos.php';
 
-class TitulosData extends Data {
+class TitulosData extends Connector {
     /* Métodos para llamar datos en ingles o español 
       Obtiene los titulos en español */
 
@@ -23,7 +23,7 @@ class TitulosData extends Data {
 
     //funcion para obtener todos los titulos de la página
     public function getTitulosData($idioma) {
-        $querySelect = "SELECT * FROM la_titulos WHERE atIdioma =" . $idioma;
+        $querySelect = "SELECT * FROM tu_titulo WHERE atIdioma =" . $idioma;
         $result = $this->exeQuery($$querySelect);
         $titulos = [];
         while ($row = mysqli_fetch_array($result)) {

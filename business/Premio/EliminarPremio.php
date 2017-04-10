@@ -1,15 +1,13 @@
 <?php
 
-include_once './ProductoBusiness.php';
+include_once './PremioBusiness.php';
 include_once '../Validaciones.php';
 $instValidaciones = new Validaciones();
 $resultValidaRecibidos = $instValidaciones->validaRecibidos(array('id', 'imagen'));
-/* Si se recibieron todos los datos esperados */
 if ($resultValidaRecibidos) {
-    /* Si se recibieron todos los datos y  ninguno esta vacio */
-    $instBusiness = new ProductoBusiness();
-    $result = $instBusiness->eliminarProductoBusiness($_POST['id']);
-    unlink("../../img/productos/". $_POST['imagen']);
+    $instBusiness = new PremioBusiness();
+    $result = $instBusiness->eliminarPremioBusiness($_POST['id']);
+    unlink("../../img/premios/". $_POST['imagen']);
     return true;
 //    $result = $instBusiness->eliminarProductoBusiness($_POST['id']);
 //    header("location: ../../Presentation/Admin/administrarProductos.php?msg=Actualizacion realizada con exito");
@@ -17,4 +15,3 @@ if ($resultValidaRecibidos) {
 //    header("location: ../../Presentation/Admin/administrarProductos.php?msg=No se recibieron todos los datos esperados");
     return false;
 }
-?>

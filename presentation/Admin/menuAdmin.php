@@ -87,11 +87,7 @@
                 <li class="nav-header">Panel de configuración</li>
                 <li><a class="ajax-link" href="administracion.php"><i class="glyphicon glyphicon-home"></i><span>Inicio</span></a>
                 </li>
-                <li>
-<!--                    <a class="ajax-link" href="imagenesInicio.php"><i class="glyphicon glyphicon-home"></i><span>Imágenes de Inicio</span></a>-->
-                    <a href="imagenesInicio.php"><i class="glyphicon glyphicon-plus"></i><span>Imágenes de Inicio</span></a>
                 
-                </li>
                 <li class="accordion">
                     <a href="#"><i class="glyphicon glyphicon-plus"></i><span>Imágenes de Galería</span></a>
                     <ul class="nav nav-pills nav-stacked">
@@ -121,6 +117,13 @@
                     <ul class="nav nav-pills nav-stacked">
                         <li><a href="ingresarVariedades.php">Ingresar variedades</a></li>
                         <li><a href="#">Administrar variedades</a></li>
+                    </ul>
+                </li>
+                <li class="accordion">
+                    <a href="#"><i class="glyphicon glyphicon-plus"></i><span>Premio</span></a>
+                    <ul class="nav nav-pills nav-stacked">
+                        <li><a href="IngresarPremio.php">Ingresar Premio</a></li>
+                        <li><a href="AdministrarPremios.php">Administrar Premios</a></li>
                     </ul>
                 </li>
 
