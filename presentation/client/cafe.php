@@ -6,7 +6,6 @@
 	<title>Turriolka</title>
 	<link rel="stylesheet" href="../../css/coffee.css">
 	<link rel="stylesheet" href="../../css/normalize.css">
-	<script src="../../js/modernizr-custom.js"></script>
 
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 

@@ -1,4 +1,4 @@
 <?php
 
-header("location: ./presentation/client/home.php");
+header("location: ./presentation/client/index.php");
 ?>
