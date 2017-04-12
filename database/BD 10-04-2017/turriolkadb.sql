@@ -288,12 +288,54 @@ INSERT INTO `tu_producto` (`atId`, `atNombre`, `atDescripcionCorta`, `atDescripc
 -- Estructura de tabla para la tabla `tu_titulo`
 --
 
-CREATE TABLE IF NOT EXISTS `tu_titulo` (
-`atId` int(11) NOT NULL,
+
+CREATE TABLE `tu_titulo` (
+  `atId` int(11) NOT NULL,
   `atNombre` text NOT NULL,
   `atDescripcion` text NOT NULL,
   `atIdioma` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Volcado de datos para la tabla `tu_titulo`
+--
+
+INSERT INTO `tu_titulo` (`atId`, `atNombre`, `atDescripcion`, `atIdioma`) VALUES
+(1, 'MENÚ', '', 0),
+(2, 'MENU', '', 1),
+(3, 'GALERÍA', '', 0),
+(4, 'GALLERY', '', 1),
+(5, 'IDENTIDAD', '', 0),
+(6, 'IDENTITY', '', 1),
+(7, 'PRODUCTOS', '', 0),
+(8, 'PRODUCTS', '', 1),
+(9, 'FERIAS', '', 0),
+(10, 'FAIRS', '', 1),
+(11, 'VARIEDADES', '', 0),
+(12, 'VARIETIES', '', 1),
+(13, 'CONTACTO', '', 0),
+(14, 'CONTACT', '', 1)
+(15, 'INICIO', '', 0),
+(16, 'HOME', '', 1),;
+
+--
+-- Índices para tablas volcadas
+--
+
+--
+-- Indices de la tabla `tu_titulo`
+--
+ALTER TABLE `tu_titulo`
+  ADD PRIMARY KEY (`atId`);
+
+--
+-- AUTO_INCREMENT de las tablas volcadas
+--
+
+--
+-- AUTO_INCREMENT de la tabla `tu_titulo`
+--
+
 
 -- --------------------------------------------------------
 
@@ -375,7 +417,9 @@ ALTER TABLE `tu_titulo`
 --
 ALTER TABLE `tu_variedad`
  ADD PRIMARY KEY (`atId`);
-
+ 
+ALTER TABLE `tu_titulo`
+  MODIFY `atId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 --
 -- AUTO_INCREMENT de las tablas volcadas
 --
