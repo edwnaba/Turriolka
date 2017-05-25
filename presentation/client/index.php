@@ -173,9 +173,11 @@ License URL: http://creativecommons.org/licenses/by/3.0/
         if (isset($_GET['lang'])) {
             if ($_GET['lang'] == 'es') {
                 $arregloTitulos = $titulos->obtenerTitulosEsBusiness();
-            } else {
-                $arregloTitulos = $titulos->obtenerTitulosInBusiness();
-            }
+            }else {
+            $arregloTitulos = $titulos->obtenerTitulosInBusiness();
+            }   
+        } else {
+            $arregloTitulos = $titulos->obtenerTitulosInBusiness();
         }
         ?>
     </head>
